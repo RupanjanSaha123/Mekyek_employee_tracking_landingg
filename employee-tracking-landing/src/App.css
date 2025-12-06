@@ -1,0 +1,99 @@
+
+
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive adjustments for download boxes */
+@media (max-width: 1024px) {
+  .download-boxes {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 30px auto; /* Reduced margin */
+  }
+  
+  .download-box {
+    min-height: auto; /* Remove fixed height on mobile */
+    padding: 20px; /* Even smaller padding on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .download-section {
+    padding: 60px 0; /* Reduced padding */
+  }
+  
+  .download-boxes {
+    gap: 20px; /* Smaller gap */
+  }
+  
+  .platform-icon {
+    width: 45px; /* Smaller on mobile */
+    height: 45px;
+  }
+  
+  .platform-icon i {
+    font-size: 1.2rem; /* Smaller on mobile */
+  }
+  
+  .platform-name {
+    font-size: 1.3rem; /* Smaller on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .download-box {
+    padding: 18px; /* Even smaller padding */
+  }
+  
+  .box-header {
+    gap: 10px; /* Smaller gap */
+  }
+  
+  .feature-item {
+    font-size: 0.85rem; /* Smaller font */
+  }
+  
+  .download-btn {
+    padding: 10px; /* Smaller buttons */
+    font-size: 0.85rem;
+  }
+}
+
