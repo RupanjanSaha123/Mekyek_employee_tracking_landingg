@@ -1,8 +1,9 @@
-// In HeroSection.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/App.css';
 
 const HeroSection = () => {
+  const [hoveredStat, setHoveredStat] = useState(null);
+
   return (
     <section className="hero">
       <div className="container">
@@ -15,24 +16,40 @@ const HeroSection = () => {
             AI-powered employee tracking software. Used by 10,000+ companies worldwide.
           </p>
           
+          {/* Stats with reduced gap */}
           <div className="hero-stats">
-            <div className="stat stat-orb" data-color="purple">
-              <div className="orb-glow"></div>
-              <h3>50K+</h3>
-              <p>Active Users</p>
-              <div className="particles"></div>
+            <div 
+              className={`stat stat-1 ${hoveredStat === 0 ? 'hovered' : ''}`}
+              onMouseEnter={() => setHoveredStat(0)}
+              onMouseLeave={() => setHoveredStat(null)}
+            >
+              <div className="stat-content">
+                <h3>50K+</h3>
+                <p>Active Users</p>
+              </div>
+              <div className="stat-glow"></div>
             </div>
-            <div className="stat stat-orb" data-color="pink">
-              <div className="orb-glow"></div>
-              <h3>99.9%</h3>
-              <p>Uptime</p>
-              <div className="particles"></div>
+            <div 
+              className={`stat stat-2 ${hoveredStat === 1 ? 'hovered' : ''}`}
+              onMouseEnter={() => setHoveredStat(1)}
+              onMouseLeave={() => setHoveredStat(null)}
+            >
+              <div className="stat-content">
+                <h3>99.9%</h3>
+                <p>Uptime</p>
+              </div>
+              <div className="stat-glow"></div>
             </div>
-            <div className="stat stat-orb" data-color="blue">
-              <div className="orb-glow"></div>
-              <h3>24/7</h3>
-              <p>Support</p>
-              <div className="particles"></div>
+            <div 
+              className={`stat stat-3 ${hoveredStat === 2 ? 'hovered' : ''}`}
+              onMouseEnter={() => setHoveredStat(2)}
+              onMouseLeave={() => setHoveredStat(null)}
+            >
+              <div className="stat-content">
+                <h3>24/7</h3>
+                <p>Support</p>
+              </div>
+              <div className="stat-glow"></div>
             </div>
           </div>
         </div>

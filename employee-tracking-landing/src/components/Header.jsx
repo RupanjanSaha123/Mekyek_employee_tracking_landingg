@@ -7,18 +7,20 @@ const Header = () => {
   return (
     <header className="header">
       <div className="container">
-        <div className="logo">
-          <span className="logo-icon animate-glow">
-            <i className="fas fa-users"></i>
-          </span>
-          <h1>Mekyek<span className="highlight"></span></h1>
+        <div className="logo-container">
+          <a href="/" className="logo-link">
+            <img 
+              src="/mekyek_logo_dark.png" 
+              alt="Mekyek Logo" 
+              className="header-logo"
+            />
+          </a>
         </div>
         
         <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
           <a href="#features" className="nav-link">Features</a>
-          <a href="#download" className="nav-link">About us</a>
+          <a href="#download" className="nav-link">About Us</a>
           <a href="#pricing" className="nav-link">Connect</a>
-          <a href="#contact" className="nav-link">Contact</a>
           <button className="login-btn">Download</button>
         </nav>
 

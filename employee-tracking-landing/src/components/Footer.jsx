@@ -9,40 +9,16 @@ const Footer = () => {
           <div className="footer-section">
             <div className="logo">
               <span className="logo-icon"></span>
-              <h2>
-                <span className="highlight">Mekyek</span>
+              <h2>Mekyek
+                <span className="highlight"></span>
               </h2>
             </div>
             <p className="footer-description">
-              Modern employee tracking solution for forward-thinking companies.
+              Connecting professionals, empowering careers, and fostering growth in the digital age.
             </p>
           </div>
 
-          <div className="footer-links">
-            <div className="link-group">
-              <h4>Product</h4>
-              <a href="#">Features</a>
-              <a href="#">Download</a>
-              <a href="#">API Docs</a>
-              <a href="#">Changelog</a>
-            </div>
-
-            <div className="link-group">
-              <h4>Company</h4>
-              <a href="#">About</a>
-              <a href="#">Blog</a>
-              <a href="#">Careers</a>
-              <a href="#">Contact</a>
-            </div>
-
-            <div className="link-group">
-              <h4>Legal</h4>
-              <a href="#">Privacy</a>
-              <a href="#">Terms</a>
-              <a href="#">Security</a>
-              <a href="#">Compliance</a>
-            </div>
-          </div>
+          
         </div>
 
         <div className="footer-bottom">
