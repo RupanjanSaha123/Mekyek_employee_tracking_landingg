@@ -9,16 +9,16 @@ const Footer = () => {
           <div className="footer-section">
             <div className="logo">
               <span className="logo-icon"></span>
-              <h2>Mekyek
+              <h2>
+                Mekyek
                 <span className="highlight"></span>
               </h2>
             </div>
             <p className="footer-description">
-              Connecting professionals, empowering careers, and fostering growth in the digital age.
+              Connecting professionals, empowering careers, and fostering growth
+              in the digital age.
             </p>
           </div>
-
-          
         </div>
 
         <div className="footer-bottom">

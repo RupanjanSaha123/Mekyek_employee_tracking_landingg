@@ -1,9 +1,12 @@
+
+ 
+
 import React, { useState } from 'react';
 import '../styles/App.css';
 
 const HeroSection = () => {
   const [hoveredStat, setHoveredStat] = useState(null);
-
+ 
   return (
     <section className="hero">
       <div className="container">
