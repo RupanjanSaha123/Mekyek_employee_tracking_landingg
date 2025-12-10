@@ -1,6 +1,3 @@
-
- 
-
 import React, { useState } from 'react';
 import '../styles/App.css';
 
@@ -12,7 +9,9 @@ const HeroSection = () => {
       <div className="container">
         <div className="hero-content">
           <h2 className="hero-title animate-float">
-            Modern Employee <span className="highlight">Tracking</span> Solution
+            Modern Employee Tracking
+            <br />
+            Solution
           </h2>
           <p className="hero-subtitle">
             Monitor productivity, track attendance, and optimize workflows with our 
