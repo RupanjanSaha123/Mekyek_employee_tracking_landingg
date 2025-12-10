@@ -170,6 +170,7 @@ body {
   padding: 100px 0;
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 .hero::before {
@@ -179,8 +180,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 1;
+  background: transparent;
+  z-index: 0;
 }
 
 .hero .container {
@@ -400,7 +401,7 @@ body {
 .download-section {
   padding: 80px 0;
   text-align: center;
-  background: rgba(0, 0, 0, 0.652);
+  background: rgba(0, 0, 0, 0.85);
   position: relative;
 }
 
@@ -960,6 +961,7 @@ body {
 /* Responsive Design */
 @media (max-width: 1024px) {
   .download-boxes {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-template-columns: 1fr;
     max-width: 500px;
     margin: 30px auto;
@@ -1068,13 +1070,13 @@ body {
   padding: 60px 0 30px;
   overflow: hidden;
   
-  /* Animated gradient background */
+  /* Darker animated gradient background */
   background: linear-gradient(135deg, 
-    #0a0a0a 0%, 
-    #1a1a1a 25%, 
-    #2d2d2d 50%, 
-    #1a1a1a 75%, 
-    #0a0a0a 100%
+    #050505 0%, 
+    #0d0d0d 25%, 
+    #1a1a1a 50%, 
+    #0d0d0d 75%, 
+    #050505 100%
   );
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;

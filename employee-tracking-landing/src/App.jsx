@@ -4,6 +4,7 @@ import HeroSection from './components/HeroSection';
 import DownloadBox from './components/DownloadBox';
 import FeaturesSection from './components/FeaturesSection';
 import Footer from './components/Footer';
+import LightRays from './components/LightRays';
 
 function App() {
   return (
@@ -11,6 +12,20 @@ function App() {
       <Header />
       <HeroSection />
       <div className="download-section">
+        <div style={{ width: '100%', height: '600px', position: 'absolute', top: 0, left: 0, zIndex: 0, pointerEvents: 'none' }}>
+          <LightRays
+            raysOrigin="top-center"
+            raysColor="#565757ff"
+            raysSpeed={1.5}
+            lightSpread={0.8}
+            rayLength={1.2}
+            followMouse={true}
+            mouseInfluence={0.1}
+            noiseAmount={0.1}
+            distortion={0.05}
+            className="custom-rays"
+          />
+        </div>
         <h2 className="section-title">Download for Your Platform</h2>
         <p className="section-subtitle">Track your team seamlessly on any operating system</p>
         <div className="download-boxes">
