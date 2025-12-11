@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import DownloadBox from './components/DownloadBox';
 import FeaturesSection from './components/FeaturesSection';
 import Footer from './components/Footer';
 import LightRays from './components/LightRays';
+import ConnectPage from './components/ConnectPage';
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('home');
+
   return (
     <div className="app dark-theme">
-      <Header />
-      <HeroSection />
-      <div className="download-section">
+      <Header onNavigate={setCurrentPage} />
+      
+      {currentPage === 'home' ? (
+        <>
+          <HeroSection />
+          <div className="download-section">
         <div style={{ width: '100%', height: '600px', position: 'absolute', top: 0, left: 0, zIndex: 0, pointerEvents: 'none' }}>
           <LightRays
             raysOrigin="top-center"
@@ -54,6 +60,13 @@ function App() {
       </div>
       <FeaturesSection />
       <Footer />
+        </>
+      ) : (
+        <>
+          <ConnectPage />
+          <Footer />
+        </>
+      )}
     </div>
   );
 }
