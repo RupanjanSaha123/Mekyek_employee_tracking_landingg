@@ -110,37 +110,6 @@ const ConnectPage = () => {
           </div>
         </div>
       </section>
-
-      {/* Info Section */}
-      <section className="connect-info">
-        <div className="container">
-          <div className="info-grid">
-            <div className="info-card">
-              <div className="info-icon">
-                <i className="fas fa-envelope"></i>
-              </div>
-              <h3>Email</h3>
-              <p><a href="mailto:hello@mekyek.com">hello@mekyek.com</a></p>
-            </div>
-
-            <div className="info-card">
-              <div className="info-icon">
-                <i className="fas fa-phone"></i>
-              </div>
-              <h3>Phone</h3>
-              <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
-            </div>
-
-            <div className="info-card">
-              <div className="info-icon">
-                <i className="fas fa-map-marker-alt"></i>
-              </div>
-              <h3>Address</h3>
-              <p>123 Tech Street, Silicon Valley, CA 94025</p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

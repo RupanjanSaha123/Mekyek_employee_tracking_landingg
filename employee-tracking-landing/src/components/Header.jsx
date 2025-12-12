@@ -19,7 +19,7 @@ const Header = ({ onNavigate }) => {
       <div className="container">
         <div className="logo-container">
           <a href="#" onClick={(e) => { e.preventDefault(); handleHome(); }} className="logo-link">
-            <span className="header-logo-text">Mekyek</span>
+            <img src="/mekyek_logo_dark.png" alt="Mekyek Logo" className="header-logo" />
           </a>
         </div>
         

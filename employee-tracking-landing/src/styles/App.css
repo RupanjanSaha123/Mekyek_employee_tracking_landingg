@@ -90,7 +90,7 @@ body {
   height: 44px;
   width: auto;
   transition: all 0.3s ease;
-  filter: brightness(1.8);
+  filter: brightness(1);
 }
 
 /* Navigation */
@@ -1083,6 +1083,82 @@ body {
   animation: gradientShift 15s ease infinite;
 }
 
+/* Footer Contact Section Styles */
+.footer-section h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center; /* center the list items horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-list li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center the content inside each list item */
+  gap: 10px;
+}
+
+.contact-link {
+  color: #e8e8e8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #ffffff;
+}
+
+.contact-link i {
+  color: #e8e8e8;
+  font-size: 1rem;
+}
+
+.contact-address {
+  gap: 10px;
+}
+
+.contact-address i {
+  color: #e8e8e8;
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-content {
+    text-align: center;
+  }
+
+  .footer-section h3 {
+    text-align: center;
+  }
+
+  .contact-list {
+    text-align: center;
+  }
+
+  .contact-list li {
+    justify-content: center;
+  }
+}
+
 /* Metallic silver overlay with shimmer effect */
 .footer::before {
   content: '';
@@ -1477,8 +1553,8 @@ body {
     
     background: 
         radial-gradient(
-            circle 400px at var(--mouse-x) var(--mouse-y),
-            rgba(255, 255, 255, 0.1) 0%,
+            circle 200px at var(--mouse-x) var(--mouse-y),
+            rgba(252, 252, 252, 0.146) 0%,
             transparent 50% 
         );
     
