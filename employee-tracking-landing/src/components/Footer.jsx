@@ -2,11 +2,6 @@ import React from "react";
 import "../styles/App.css";
 
 const Footer = () => {
-  /* NOTE: The link URLs (hrefs) and the structure are correct.
-    If the icons (fab fa-twitter, fas fa-phone, etc.) are NOT showing, 
-    you MUST ensure the Font Awesome CSS link is added to the <head> 
-    of your public/index.html file (e.g., using a CDN link for Font Awesome 6).
-  */
   return (
     <footer className="footer">
       <div className="container">
@@ -53,7 +48,7 @@ const Footer = () => {
 
           <div className="social-links">
             <a
-              href="https://twitter.com/mekyek"
+              href="#"
               className="social-icon"
               aria-label="Twitter"
               target="_blank"
@@ -73,7 +68,7 @@ const Footer = () => {
               <i className="fab fa-facebook-f"></i>
             </a>
             <a
-              href="https://www.instagram.com/mekyek"
+              href="#"
               className="social-icon"
               aria-label="Instagram"
               target="_blank"
@@ -93,7 +88,7 @@ const Footer = () => {
               <i className="fab fa-linkedin-in"></i>
             </a>
             <a
-              href="https://github.com/mekyek"
+              href="#"
               className="social-icon"
               aria-label="GitHub"
               target="_blank"

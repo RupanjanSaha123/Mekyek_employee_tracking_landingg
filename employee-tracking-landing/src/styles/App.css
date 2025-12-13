@@ -675,7 +675,7 @@ body {
 
 /* Features Section - Semi-transparent */
 .features {
-  padding: 100px 0;
+  padding: 40px 0;
   background: rgba(0, 0, 0, 0.6);
   position: relative;
   overflow: hidden;
@@ -694,20 +694,20 @@ body {
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-top: 60px;
+  gap: 16px;
+  margin-top: 30px;
 }
 
 .feature-card {
   background: rgba(0, 0, 0, 0.7);
-  padding: 35px;
+  padding: 18px;
   border-radius: var(--border-radius);
   text-align: center;
   transition: var(--transition);
   border: 1px solid rgba(255, 255, 255, 0.2);
   position: relative;
   overflow: hidden;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
 }
 
 .feature-card::before {
@@ -733,30 +733,30 @@ body {
 }
 
 .feature-icon {
-  font-size: 2.5rem;
-  margin-bottom: 25px;
+  font-size: 1.8rem;
+  margin-bottom: 12px;
   position: relative;
   z-index: 2;
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
-  width: 70px;
-  height: 70px;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.25));
+  width: 52px;
+  height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  margin: 0 auto 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  margin: 0 auto 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .feature-icon i {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   color: var(--light);
 }
 
 .feature-title {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
+  font-size: 1.25rem;
+  margin-bottom: 8px;
   color: var(--light);
   position: relative;
   z-index: 2;
@@ -766,6 +766,7 @@ body {
   color: var(--light-gray);
   position: relative;
   z-index: 2;
+  font-size: 0.95rem;
 }
 
 /* Ultra Compact Footer */
@@ -1096,7 +1097,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  text-align: center; /* center the list items horizontally */
+  text-align: center; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1106,7 +1107,7 @@ body {
   margin-bottom: 15px;
   display: flex;
   align-items: center;
-  justify-content: center; /* center the content inside each list item */
+  justify-content: center; 
   gap: 10px;
 }
 
@@ -1335,9 +1336,8 @@ body {
   box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
 }
 
-/* ============================================
-   ANIMATIONS
-   ============================================ */
+
+   
 
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
@@ -1355,9 +1355,6 @@ body {
   50% { opacity: 0.6; transform: scale(1.2); }
 }
 
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
 
 @media (max-width: 768px) {
   .footer {
@@ -1530,13 +1527,13 @@ body {
 
 
 .hover-gradient-section {
-    position: relative; 
-    padding: 80px 0;
-    color: #fff;
-    overflow: hidden; 
-    background: #000; 
-    --mouse-x: 50%;
-    --mouse-y: 50%;
+  position: relative; 
+  padding: 40px 0;
+  color: #fff;
+  overflow: hidden; 
+  background: #000; 
+  --mouse-x: 50%;
+  --mouse-y: 50%;
 }
 
 

@@ -58,7 +58,6 @@ const DownloadBox = ({
               Download Installer
               <i className="fas fa-download download-icon"></i>
             </button>
-            <button className="download-btn secondary">Get .zip Package</button>
           </div>
 
           <div className="additional-info">
