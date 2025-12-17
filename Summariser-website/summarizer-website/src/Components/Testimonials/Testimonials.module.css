@@ -1,0 +1,331 @@
+.testimonials {
+  padding: 5rem 0;
+  background: var(--background);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #f59e0b;
+}
+
+.header h2 {
+  margin-bottom: 1rem;
+}
+
+.header p {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+}
+
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.testimonialCard {
+  background: var(--surface);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  transition: transform var(--transition-normal);
+  animation: slideIn 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.testimonialCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.quoteIcon {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  color: var(--primary);
+  opacity: 0.2;
+  width: 32px;
+  height: 32px;
+}
+
+.content {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.rating {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.star {
+  color: var(--border);
+}
+
+.star.filled {
+  color: #fbbf24;
+  fill: #fbbf24;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.avatar {
+  font-size: 2rem;
+  width: 48px;
+  height: 48px;
+  background: var(--surface-alt);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.authorInfo {
+  flex: 1;
+}
+
+.name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.role {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.company {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  margin-top: 0.25rem;
+}
+
+.carousel {
+  background: var(--surface);
+  border-radius: var(--radius-2xl);
+  padding: 3rem;
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 4rem;
+}
+
+.carouselTrack {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.carouselItem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all var(--transition-slow);
+}
+
+.carouselItem.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.carouselContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.carouselQuote {
+  color: var(--primary);
+  margin: 0 auto 1.5rem;
+  width: 48px;
+  height: 48px;
+}
+
+.carouselContent p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.carouselAuthor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.carouselAvatar {
+  font-size: 2rem;
+}
+
+.carouselName {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.carouselRole {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.carouselControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.carouselBtn {
+  background: var(--surface-alt);
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--text-primary);
+  font-size: 1.25rem;
+}
+
+.carouselBtn:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  padding: 0;
+}
+
+.dot.active {
+  background: var(--primary);
+  transform: scale(1.5);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+
+.stat {
+  padding: 2rem;
+  background: var(--surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.statNumber {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  color: var(--text-tertiary);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.statStar {
+  color: #fbbf24;
+  fill: #fbbf24;
+}
+
+.recommend,
+.users {
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    padding: 2rem 1rem;
+  }
+  
+  .carouselContent p {
+    font-size: 1rem;
+  }
+  
+  .testimonialsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonialsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .carousel {
+    padding: 2rem 1rem;
+  }
+  
+  .carouselContent p {
+    font-size: 1rem;
+  }
+  
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
