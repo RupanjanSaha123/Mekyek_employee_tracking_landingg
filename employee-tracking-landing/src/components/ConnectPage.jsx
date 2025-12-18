@@ -10,6 +10,8 @@ const ConnectPage = () => {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,18 +19,73 @@ const ConnectPage = () => {
       ...prevState,
       [name]: value
     }));
+    // Clear error when user starts typing
+    if (error) setError('');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you would typically send the form data to a backend
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    // Reset form after 3 seconds
-    setTimeout(() => {
+    setLoading(true);
+    setError('');
+
+    try {
+      // Send email using Resend API
+      const response = await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${process.env.REACT_APP_RESEND_API_KEY || 'your_resend_api_key_here'}`
+        },
+        body: JSON.stringify({
+          from: 'Acme <onboarding@resend.dev>', // You can change this to your domain
+          to: ['info@mekyek.com'], // Owner's email
+          reply_to: formData.email, // So owner can reply directly to user
+          subject: `New Contact Form Message from ${formData.name}`,
+          html: `
+            <h3>New Message from Contact Form</h3>
+            <p><strong>Name:</strong> ${formData.name}</p>
+            <p><strong>Email:</strong> ${formData.email}</p>
+            <p><strong>Message:</strong></p>
+            <p>${formData.message.replace(/\n/g, '<br>')}</p>
+            <hr>
+            <p><small>Sent from your website contact form</small></p>
+          `,
+          text: `
+            New Message from Contact Form
+            
+            Name: ${formData.name}
+            Email: ${formData.email}
+            Message: ${formData.message}
+            
+            ---
+            Sent from your website contact form
+          `
+        })
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Failed to send message');
+      }
+
+      const data = await response.json();
+      console.log('Email sent successfully:', data);
+      
+      setSubmitted(true);
+      // Reset form
       setFormData({ name: '', email: '', message: '' });
-      setSubmitted(false);
-    }, 3000);
+      
+      // Reset submission status after 5 seconds
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 5000);
+      
+    } catch (err) {
+      console.error('Error sending email:', err);
+      setError(err.message || 'Failed to send message. Please try again later.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -62,6 +119,7 @@ const ConnectPage = () => {
                   required
                   placeholder="Enter your full name"
                   className="form-input"
+                  disabled={loading}
                 />
               </div>
 
@@ -76,6 +134,7 @@ const ConnectPage = () => {
                   required
                   placeholder="Enter your email address"
                   className="form-input"
+                  disabled={loading}
                 />
               </div>
 
@@ -90,15 +149,28 @@ const ConnectPage = () => {
                   placeholder="Enter your message"
                   rows="6"
                   className="form-textarea"
+                  disabled={loading}
                 ></textarea>
               </div>
+
+              {error && (
+                <div className="error-message">
+                  <p>{error}</p>
+                </div>
+              )}
 
               <button 
                 type="submit" 
                 className="submit-btn"
-                disabled={submitted}
+                disabled={loading || submitted}
               >
-                {submitted ? 'Message Sent! ✓' : 'Send Message'}
+                {loading ? (
+                  <span>Sending...</span>
+                ) : submitted ? (
+                  'Message Sent! ✓'
+                ) : (
+                  'Send Message'
+                )}
               </button>
             </form>
 
