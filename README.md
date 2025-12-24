@@ -20,7 +20,7 @@ It focuses on clearly communicating how the platform helps organizations improve
 - HTML5  
 - CSS3  
 - Responsive Web Design  
-- Vite / Create React App (as per project configuration)
+- Create React App 
 
 ---
 
